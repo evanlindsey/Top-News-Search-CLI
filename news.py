@@ -1,5 +1,6 @@
 import json
 import os
+import urllib.parse
 import urllib.request
 
 
@@ -58,6 +59,7 @@ class News:
         if sources != '':
             sources = ','.join([x for x in sources])
             sources = f'{cls.sources_param}={sources}&'
+        term = urllib.parse.quote(term)
         url = f'{cls.news_url}{cls.headlines_ep}?{sources}{cls.term_param}={term}&{cls.page_param}=100&{cls.api_param}={cls.api_key}'
         articles = cls.request_json(url, 'articles')
         return dict(enumerate(articles))
