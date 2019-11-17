@@ -1,1 +1,1 @@
-# Top-News-Search-CLI
+# Top News Search CLI
