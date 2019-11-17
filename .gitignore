@@ -1,5 +1,5 @@
 __pycache__
 .vscode
-db-dev.sqlite
+db.sqlite
 app-dev.ps1
 Pipfile.lock

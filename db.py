@@ -9,7 +9,7 @@ class DB:
     Provides methods for connecting to and querying the SQLite database.
     '''
 
-    db_path = os.environ['DB_PATH']
+    db_path = 'db.sqlite'
 
     @classmethod
     def sql_connect(cls):
