@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+    <title>Python: module db</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body bgcolor="#f0f0f8">
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+        <tr bgcolor="#7799ee">
+            <td valign=bottom>&nbsp;<br>
+                <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>db</strong></big></big></font>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+        <tr bgcolor="#aa55cc">
+            <td colspan=3 valign=bottom>&nbsp;<br>
+                <font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+            <td>&nbsp;</td>
+            <td width="100%">
+                <table width="100%" summary="list">
+                    <tr>
+                        <td width="25%" valign=top><a href="binascii.html">binascii</a><br>
+                        </td>
+                        <td width="25%" valign=top><a href="hashlib.html">hashlib</a><br>
+                        </td>
+                        <td width="25%" valign=top><a href="os.html">os</a><br>
+                        </td>
+                        <td width="25%" valign=top><a href="sqlite3.html">sqlite3</a><br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+        <tr bgcolor="#ee77aa">
+            <td colspan=3 valign=bottom>&nbsp;<br>
+                <font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+            <td>&nbsp;</td>
+            <td width="100%">
+                <dl>
+                    <dt>
+                        <font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+                        </font>
+                    </dt>
+                    <dd>
+                        <dl>
+                            <dt>
+                                <font face="helvetica, arial"><a href="db.html#DB">DB</a>
+                                </font>
+                            </dt>
+                        </dl>
+                    </dd>
+                </dl>
+                <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+                    <tr bgcolor="#ffc8d8">
+                        <td colspan=3 valign=bottom>&nbsp;<br>
+                            <font color="#000000" face="helvetica, arial"><a name="DB">class
+                                    <strong>DB</strong></a>(<a href="builtins.html#object">builtins.object</a>)
+                            </font>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#ffc8d8">
+                        <td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+                        <td colspan=2><tt><a href="#DB">DB</a>&nbsp;class<br>
+                                Provides&nbsp;methods&nbsp;for&nbsp;connecting&nbsp;to&nbsp;and&nbsp;querying&nbsp;the&nbsp;SQLite&nbsp;database.<br>&nbsp;</tt>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td width="100%">Class methods defined here:<br>
+                            <dl>
+                                <dt><a name="DB-add_article"><strong>add_article</strong></a>(user_id,
+                                    article)<font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Add&nbsp;a&nbsp;row&nbsp;to&nbsp;the&nbsp;articles&nbsp;table&nbsp;for&nbsp;the&nbsp;given&nbsp;user&nbsp;id&nbsp;using&nbsp;the&nbsp;given&nbsp;pickled&nbsp;article&nbsp;<a
+                                            href="builtins.html#object">object</a>.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;user_id:&nbsp;Target&nbsp;user&nbsp;ID.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;article:&nbsp;Pickled&nbsp;article&nbsp;<a
+                                            href="builtins.html#object">object</a>.</tt></dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-add_user"><strong>add_user</strong></a>(username, password)
+                                    <font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Add&nbsp;a&nbsp;row&nbsp;to&nbsp;the&nbsp;users&nbsp;table&nbsp;using&nbsp;the&nbsp;given&nbsp;user&nbsp;name&nbsp;and&nbsp;password.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;username:&nbsp;Desired&nbsp;user&nbsp;name.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;password:&nbsp;Hashed&nbsp;password.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;boolean:&nbsp;The&nbsp;return&nbsp;value.&nbsp;True&nbsp;if&nbsp;successful.&nbsp;False&nbsp;if&nbsp;error&nbsp;(such&nbsp;as&nbsp;user&nbsp;name&nbsp;taken).</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-auth_user"><strong>auth_user</strong></a>(username,
+                                    password)<font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Retrieve&nbsp;the&nbsp;given&nbsp;user&nbsp;name&nbsp;from&nbsp;the&nbsp;users&nbsp;table&nbsp;and&nbsp;compare&nbsp;the&nbsp;passwords.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;username:&nbsp;Target&nbsp;user&nbsp;name.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;password:&nbsp;Plain&nbsp;text&nbsp;password.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;int:&nbsp;The&nbsp;return&nbsp;value.&nbsp;User&nbsp;ID&nbsp;is&nbsp;successful.&nbsp;-1&nbsp;if&nbsp;error&nbsp;(such&nbsp;as&nbsp;user&nbsp;not&nbsp;existing&nbsp;or&nbsp;password&nbsp;not&nbsp;matching).</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-check_password"><strong>check_password</strong></a>(password,
+                                    hashed, salt)<font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Check&nbsp;if&nbsp;the&nbsp;provided&nbsp;password&nbsp;matches&nbsp;the&nbsp;original&nbsp;password&nbsp;hash.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;password:&nbsp;Plain&nbsp;text&nbsp;password.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;hashed:&nbsp;Hash&nbsp;of&nbsp;the&nbsp;original&nbsp;password.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;salt:&nbsp;Salt&nbsp;in&nbsp;hex&nbsp;form.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;boolean:&nbsp;The&nbsp;return&nbsp;value.&nbsp;Result&nbsp;of&nbsp;the&nbsp;password&nbsp;comparison.</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-delete_article"><strong>delete_article</strong></a>(article_id)
+                                    <font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Delete&nbsp;a&nbsp;row&nbsp;from&nbsp;the&nbsp;articles&nbsp;table&nbsp;matching&nbsp;the&nbsp;given&nbsp;article&nbsp;id.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;article_id:&nbsp;Target&nbsp;article&nbsp;ID.</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-get_articles"><strong>get_articles</strong></a>(user_id)
+                                    <font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Retrieve&nbsp;saved&nbsp;articles&nbsp;from&nbsp;the&nbsp;articles&nbsp;table&nbsp;for&nbsp;the&nbsp;given&nbsp;user&nbsp;ID.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;user_id:&nbsp;Target&nbsp;user&nbsp;ID.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;dictionary:&nbsp;The&nbsp;return&nbsp;value.&nbsp;All&nbsp;resulting&nbsp;articles.&nbsp;Keys&nbsp;are&nbsp;article&nbsp;IDs.&nbsp;Values&nbsp;are&nbsp;pickled&nbsp;article&nbsp;objects.</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-get_salt"><strong>get_salt</strong></a>()<font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Generate&nbsp;a&nbsp;random&nbsp;salt&nbsp;for&nbsp;use&nbsp;in&nbsp;the&nbsp;password&nbsp;hash.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;string:&nbsp;The&nbsp;return&nbsp;value.&nbsp;Hex&nbsp;value&nbsp;of&nbsp;the&nbsp;generated&nbsp;salt.</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-get_user"><strong>get_user</strong></a>(username)<font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Retrieve&nbsp;the&nbsp;row&nbsp;from&nbsp;the&nbsp;users&nbsp;table&nbsp;that&nbsp;matches&nbsp;the&nbsp;user&nbsp;name.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;username:&nbsp;Target&nbsp;user&nbsp;name.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;The&nbsp;return&nbsp;value.&nbsp;Row&nbsp;result&nbsp;from&nbsp;the&nbsp;select&nbsp;statement.</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-hash_password"><strong>hash_password</strong></a>(password,
+                                    salt)<font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Create&nbsp;a&nbsp;password&nbsp;hash&nbsp;from&nbsp;the&nbsp;given&nbsp;password&nbsp;and&nbsp;salt.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;password:&nbsp;Plain&nbsp;text&nbsp;password.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;salt:&nbsp;Salt&nbsp;in&nbsp;hex&nbsp;form.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;string:&nbsp;The&nbsp;return&nbsp;value.&nbsp;Resulting&nbsp;password&nbsp;hash.</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-sql_command"><strong>sql_command</strong></a>(query, data)
+                                    <font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Execute&nbsp;the&nbsp;given&nbsp;query&nbsp;against&nbsp;the&nbsp;SQLite&nbsp;connection.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;query:&nbsp;Target&nbsp;query&nbsp;to&nbsp;execute.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;Variables&nbsp;to&nbsp;inject&nbsp;in&nbsp;the&nbsp;query.</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-sql_connect"><strong>sql_connect</strong></a>()<font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Connect&nbsp;to&nbsp;the&nbsp;SQLite&nbsp;database&nbsp;using&nbsp;credentials&nbsp;from&nbsp;class&nbsp;properties.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Connection:&nbsp;The&nbsp;return&nbsp;value.&nbsp;Object&nbsp;to&nbsp;perform&nbsp;SQL&nbsp;actions&nbsp;on.</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><a name="DB-sql_select"><strong>sql_select</strong></a>(query, data)
+                                    <font color="#909090">
+                                        <font face="helvetica, arial"> from <a
+                                                href="builtins.html#type">builtins.type</a></font>
+                                    </font>
+                                </dt>
+                                <dd><tt>Execute&nbsp;the&nbsp;given&nbsp;select&nbsp;statement&nbsp;against&nbsp;the&nbsp;SQLite&nbsp;connection.<br>
+                                        &nbsp;<br>
+                                        Args:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;query:&nbsp;Target&nbsp;select&nbsp;statement&nbsp;to&nbsp;execute.<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;Variables&nbsp;to&nbsp;inject&nbsp;in&nbsp;the&nbsp;select&nbsp;statement.<br>
+                                        &nbsp;<br>
+                                        Returns:<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;The&nbsp;return&nbsp;value.&nbsp;Row&nbsp;results&nbsp;from&nbsp;the&nbsp;select&nbsp;statement.</tt>
+                                </dd>
+                            </dl>
+                            <hr>
+                            Data descriptors defined here:<br>
+                            <dl>
+                                <dt><strong>__dict__</strong></dt>
+                                <dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><strong>__weakref__</strong></dt>
+                                <dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt>
+                                </dd>
+                            </dl>
+                            <hr>
+                            Data and other attributes defined here:<br>
+                            <dl>
+                                <dt><strong>db_path</strong> = 'db.sqlite'
+                            </dl>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
