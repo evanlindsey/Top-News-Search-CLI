@@ -1,4 +1,4 @@
-from colorama import Fore, Back, Style
+from colorama import init, Fore, Back, Style
 
 
 class Menu:
@@ -10,6 +10,7 @@ class Menu:
 
     def __init__(self):
         '''Constructor - Assigns class properties.'''
+        init()
         self.Fore = Fore
         self.Back = Back
         self.Style = Style
@@ -98,4 +99,5 @@ class Menu:
         Returns:
             string: The return value. Input with yellow formatting.
         '''
-        return input(f'{Fore.YELLOW}{Style.BRIGHT}{msg}: ')
+        print(f'{Fore.YELLOW}{Style.BRIGHT}')
+        return input(f'{msg}: ')

@@ -2,4 +2,3 @@ __pycache__
 .vscode
 db.sqlite
 app-dev.ps1
-Pipfile.lock
